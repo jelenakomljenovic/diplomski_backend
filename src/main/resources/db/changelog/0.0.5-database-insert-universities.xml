@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="221220231052" author="jkomljenovic">
+        <insert tableName="university">
+            <column name="classification_id" value="6"/>
+            <column name="name" value="Akademija umjetnosti"/>
+            <column name="address" value="Bulevar vojvode Petra Bojovića 1a"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 348 805"/>
+            <column name="website" value="au.unibl.org"/>
+            <column name="email" value="info@aubl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77549119004251, 17.21306021078018"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Arhitektonsko-građevinski fakultet"/>
+            <column name="address" value="Vojvode Stepe Stepanovića 77/3"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 462 616"/>
+            <column name="website" value="aggf.unibl.org"/>
+            <column name="email" value="info@aggf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.76596379101093, 17.19907806278799"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="5"/>
+            <column name="name" value="Ekonomski fakultet"/>
+            <column name="address" value="Majke Jugovića 4"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 430 010"/>
+            <column name="website" value="ef.unibl.org"/>
+            <column name="email" value="info@ef.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.765223720378394, 17.19913285495877"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Elektrotehnički fakultet"/>
+            <column name="address" value="Patre 5"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 211 408"/>
+            <column name="website" value="etf.unibl.org"/>
+            <column name="email" value="info@etf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.76688431955418, 17.1869570396156"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Mašinski fakultet"/>
+            <column name="address" value="Vojvode Stepe Stepanovića 71"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 433 000"/>
+            <column name="website" value="mf.unibl.org"/>
+            <column name="email" value="info@mf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.764819938972046, 17.198152539615556"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="3"/>
+            <column name="name" value="Medicinski fakultet"/>
+            <column name="address" value="Save Mrkalja 14"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 234 100"/>
+            <column name="website" value="med.unibl.org"/>
+            <column name="email" value="info@med.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77287875079573, 17.186838968451724"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="4"/>
+            <column name="name" value="Poljoprivredni fakultet"/>
+            <column name="address" value="Bulevar vojvode Petra Bojovića 1A"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 330 901"/>
+            <column name="website" value="agro.unibl.org"/>
+            <column name="email" value="agrobl@blic.net"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77706382097872, 17.211874710780275"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="5"/>
+            <column name="name" value="Pravni fakultet"/>
+            <column name="address" value="Bulevar vojvode Stepe Stepanovića 77"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 339 001"/>
+            <column name="website" value="pf.unibl.org"/>
+            <column name="email" value="info@pf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.76568651915775, 17.19880966845144"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="1"/>
+            <column name="name" value="Prirodno-matematički fakultet"/>
+            <column name="address" value="Mladena Stojanovića 2"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 319 142"/>
+            <column name="website" value="pmf.unibl.org"/>
+            <column name="email" value="info@pmf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.779150614923346, 17.198506568451887"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Tehnološki fakultet"/>
+            <column name="address" value="Vojvode Stepe Stepanovića 73"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 434 357"/>
+            <column name="website" value="tf.unibl.org"/>
+            <column name="email" value="info@tf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.765193372900434, 17.198316853108267"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="5"/>
+            <column name="name" value="Fakultet političkih nauka"/>
+            <column name="address" value="Bulevar vojvode Petra Bojovića 1a"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 304 001"/>
+            <column name="website" value="fpn.unibl.org"/>
+            <column name="email" value="info@fpn.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.7763360230905, 17.209436910780255"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="5"/>
+            <column name="name" value="Fakultet fizičkog vaspitanja i sporta"/>
+            <column name="address" value="Bulevar vojvode Petra Bojovića 1a"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 312 280"/>
+            <column name="website" value="ffvs.unibl.org"/>
+            <column name="email" value="info@ffvs.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77389123865972, 17.211357372387457"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="6"/>
+            <column name="name" value="Filološki fakultet"/>
+            <column name="address" value="Bulevar Vojvode Petra Bojovića 1a"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 340 120"/>
+            <column name="website" value="flf.unibl.org"/>
+            <column name="email" value="info@flf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77618363054045, 17.21154297904839"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="4"/>
+            <column name="name" value="Šumarski fakultet"/>
+            <column name="address" value="Bulevar Vojvode Stepe Stepanovića 75a"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 464 628"/>
+            <column name="website" value="sf.unibl.org"/>
+            <column name="email" value="info@sf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.76585403610849, 17.198477054958765"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="6"/>
+            <column name="name" value="Filozofski fakultet"/>
+            <column name="address" value="Bulevar vojvode Petra Bojovića 1A"/>
+            <column name="city" value="Banja Luka"/>
+            <column name="postal_code" value="78000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="051 322 780"/>
+            <column name="website" value="ff.unibl.org"/>
+            <column name="email" value="info@ff.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.776306039193685, 17.212904653108765"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="5"/>
+            <column name="name" value="Ekonomski fakultet"/>
+            <column name="address" value="Studentska 11"/>
+            <column name="city" value="Brčko"/>
+            <column name="postal_code" value="76100"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="049 234 931"/>
+            <column name="website" value="efb.ues.rs.ba"/>
+            <column name="email" value="sekretarijat@efb.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.86975548865783, 18.807614168455533"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Saobraćajni fakultet"/>
+            <column name="address" value="Vojvode Mišića 52"/>
+            <column name="city" value="Doboj"/>
+            <column name="postal_code" value="74000"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="053 200 103"/>
+            <column name="website" value="sf.ues.rs.ba"/>
+            <column name="email" value="dekanat@sf.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.73644046008279, 18.09111523961443"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="3"/>
+            <column name="name" value="Medicinski fakultet"/>
+            <column name="address" value="Studentska 5"/>
+            <column name="city" value="Foča"/>
+            <column name="postal_code" value="73300"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="058 210 420"/>
+            <column name="website" value="mef.ues.rs.ba"/>
+            <column name="email" value="office-mf@ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="43.5274255490451, 18.78222565490984"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="6"/>
+            <column name="name" value="Pravoslavni bogoslovski fakultet"/>
+            <column name="address" value="9. maja br. 6"/>
+            <column name="city" value="Foča"/>
+            <column name="postal_code" value="73300"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="058 220 060"/>
+            <column name="website" value="bogoslovski.ues.rs.ba"/>
+            <column name="email" value="dekanat@bogoslovski.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="43.50815976151183, 18.774777483744913"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Elektrotehnički fakultet"/>
+            <column name="address" value="Vuka Karadžića 30"/>
+            <column name="city" value="Istočno Sarajevo"/>
+            <column name="postal_code" value="71123"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="057 342 788"/>
+            <column name="website" value="etf.ues.rs.ba"/>
+            <column name="email" value="kontakt@etf.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="43.82352934571106, 18.37441919724997"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Mašinski fakultet"/>
+            <column name="address" value="Vuka Karadžića 30"/>
+            <column name="city" value="Istočno Sarajevo"/>
+            <column name="postal_code" value="71123"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="057 340 847"/>
+            <column name="website" value="maf.unssa.rs.ba"/>
+            <column name="email" value="dekanat-maf@ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="43.82391156338093, 18.374453068414123"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="6"/>
+            <column name="name" value="Muzička akademija"/>
+            <column name="address" value="Vuka Karadžića 30"/>
+            <column name="city" value="Istočno Sarajevo"/>
+            <column name="postal_code" value="71123"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="057 342 125"/>
+            <column name="website" value="mak.ues.rs.ba"/>
+            <column name="email" value="info@mak.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="43.82342957435044, 18.374725377284925"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="4"/>
+            <column name="name" value="Poljoprivredni fakultet"/>
+            <column name="address" value="Vuka Karadžića 30"/>
+            <column name="city" value="Istočno Sarajevo"/>
+            <column name="postal_code" value="71123"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="057 340 401"/>
+            <column name="website" value="pof.ues.rs.ba"/>
+            <column name="email" value="office@pof.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="43.82360335574262, 18.37463434009439"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Rudarski fakultet"/>
+            <column name="address" value="Save Kovačevića bb"/>
+            <column name="city" value="Prijedor"/>
+            <column name="postal_code" value="79101"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="052 241 660"/>
+            <column name="website" value="rf.unibl.org"/>
+            <column name="email" value="info@rf.unibl.org"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.9728835119902, 16.71405111078814"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Tehnološki fakultet"/>
+            <column name="address" value="Karakaj bb"/>
+            <column name="city" value="Zvornik"/>
+            <column name="postal_code" value="75400"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="056 260 190"/>
+            <column name="website" value="tfzv.ues.rs.ba"/>
+            <column name="email" value="sekretar@tfzv.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.40450739845324, 19.118676639601272"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="6"/>
+            <column name="name" value="Akademija likovnih umjetnosti"/>
+            <column name="address" value="Stepe Stepanovića bb"/>
+            <column name="city" value="Trebinje"/>
+            <column name="postal_code" value="89101"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="059 270 310 "/>
+            <column name="website" value="alutb.ues.rs.ba"/>
+            <column name="email" value="alutb@teol.net"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="42.70837294808798, 18.341551895356147"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="2"/>
+            <column name="name" value="Fakultet za proizvodnju i menadžment"/>
+            <column name="address" value="Stepe Stepanovića bb"/>
+            <column name="city" value="Trebinje"/>
+            <column name="postal_code" value="89101"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="059 490 654"/>
+            <column name="website" value="fpm.ues.rs.ba"/>
+            <column name="email" value="fpm@fpm.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="42.7088622373773, 18.34155034947019"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="5"/>
+            <column name="name" value="Fakultet poslovne ekonomije"/>
+            <column name="address" value="Semberskih rata bb"/>
+            <column name="city" value="Bijeljina"/>
+            <column name="postal_code" value="76300"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="055 415 200"/>
+            <column name="website" value="fpn.unibl.org"/>
+            <column name="email" value="dekan@fpe.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77584660843477, 19.223991897287593"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="6"/>
+            <column name="name" value="Pedagoški fakultet"/>
+            <column name="address" value="Semberskih ratara bb"/>
+            <column name="city" value="Bijeljina"/>
+            <column name="postal_code" value="76300"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="055 415 400"/>
+            <column name="website" value="pfb.ues.rs.ba"/>
+            <column name="email" value="ucitelj@pfb.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77547342057284, 19.22393825310862"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="5"/>
+            <column name="name" value="Pravni fakultet"/>
+            <column name="address" value="Semberskih ratara bb"/>
+            <column name="city" value="Bijeljina"/>
+            <column name="postal_code" value="76300"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="055 211 390"/>
+            <column name="website" value="pravni.ues.rs.ba"/>
+            <column name="email" value="dekanat@pravni.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.77532490636508, 19.22414746540661"/>
+        </insert>
+        <insert tableName="university">
+            <column name="classification_id" value="4"/>
+            <column name="name" value="Poljoprivredni fakultet"/>
+            <column name="address" value="Semberskih ratara bb"/>
+            <column name="city" value="Bijeljina"/>
+            <column name="postal_code" value="76300"/>
+            <column name="country" value="Bosna i Hercegovina"/>
+            <column name="phone_number" value="055 250 122"/>
+            <column name="website" value="pof.ues.rs.ba"/>
+            <column name="email" value="studentska.bn@pof.ues.rs.ba"/>
+            <column name="type" value="true"/>
+            <column name="coordinates" value="44.775727092368534, 19.22380991566646"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

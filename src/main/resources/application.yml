@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: UniversityApplication
+  liquibase:
+    change-log: db/master-changelog.xml
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/university1?serverTimezone=UTC&createDatabaseIfNotExist=true}
+    username: ${DATABASE_USERNAME:test}
+    password: ${DATABASE_PASSWORD:test}
+  jpa:
+    show-sql: false
+    database: postgresql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: public
+  mail:
+    host: smtp.gmail.com
+    protocol: smtp
+    port: 587
+    username: cecajezakon86@gmail.com
+    password: tdkmjcyfgbnpapyy
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+url:
+  allowedOrigin: ${ALLOWED_ORIGIN:http://localhost:3000}
+
+server:
+  servlet:
+    context-path: /api
+
+app:
+  frontendUrl: ${ALLOWED_ORIGINS:http://localhost:3000}
+  auth:
+    tokenSecret: ${TOKEN_SECRET:mySecret}
+    tokenExpirationMillis: ${TOKEN_EXPIRATION_MILLIS:86400000}
+  cors:
+    allowedOrigins: ${ALLOWED_ORIGINS:http://localhost:3000}
+  oauth2:
+    # After successfully authenticating with the OAuth2 Provider,
+    # we'll be generating an auth token for the user and sending the token to the
+    # redirectUri mentioned by the client in the /oauth2/authorize request.
+    # We're not using cookies because they won't work well in mobile clients.
+    authorizedRedirectUri: ${AUTHORIZED_REDIRECT_URL:http://localhost:3000/oauth2/redirect}

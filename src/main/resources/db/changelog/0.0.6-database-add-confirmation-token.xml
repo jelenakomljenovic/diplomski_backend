@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet id="1503202414526" author="jkomljenovic">
+        <createTable tableName="confirmation_token">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="token" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="expiry_timestamp" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1503202414527" author="jkomljenovic">
+        <addColumn tableName="user">
+            <column name="confirmation_token_id" type="bigint">
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="1503202414530" author="jkomljenovic">
+        <addForeignKeyConstraint baseTableName="user" baseColumnNames="confirmation_token_id"
+                                 constraintName="user_confirmation_token_fk" referencedTableName="confirmation_token"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
