@@ -75,7 +75,7 @@ public class EmailService {
         String pageLink = "http://localhost:3000/";
         String mailText = "<p>Poštovani,</p>" +
                 "<br>" +
-                "<p>dodani ste za administratora na  <a href=\"" + pageLink + "\">stranici</a>.</p>" +
+                "<p>Poslali ste administrator na  <a href=\"" + pageLink + "\">stranici</a>.</p>" +
                 "<br>" +
                 "<p>Vaše korisničko ime je: " + username + ", a Vaša nasumično generisana lozinka je:</p>" + randomPassword +
                 "<br>"+

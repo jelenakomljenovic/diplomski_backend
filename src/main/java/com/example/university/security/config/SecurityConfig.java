@@ -89,6 +89,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, EndpointConstants.USER).permitAll()
                 .requestMatchers(HttpMethod.PUT, EndpointConstants.USER).permitAll()
                 .requestMatchers(HttpMethod.PATCH, EndpointConstants.USER).permitAll()
+                .requestMatchers(HttpMethod.POST, EndpointConstants.JOB_PROFILE).permitAll()
                 .requestMatchers(HttpMethod.GET, EndpointConstants.API_CLASSIFICATION).permitAll());
     }
 

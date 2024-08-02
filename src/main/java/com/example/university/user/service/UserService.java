@@ -87,8 +87,8 @@ public class UserService {
         User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
         user.setFirstName(userRequest.getFirstName());
         user.setLastName(userRequest.getLastName());
-        user.setEmail(user.getEmail());
-        user.setUsername(user.getUsername());
+        user.setEmail(userRequest.getEmail());
+        user.setUsername(userRequest.getUsername());
 
         user = userRepository.saveAndFlush(user);
         return userMapper.toResponse(user);

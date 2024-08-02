@@ -45,8 +45,4 @@ app:
   cors:
     allowedOrigins: ${ALLOWED_ORIGINS:http://localhost:3000}
   oauth2:
-    # After successfully authenticating with the OAuth2 Provider,
-    # we'll be generating an auth token for the user and sending the token to the
-    # redirectUri mentioned by the client in the /oauth2/authorize request.
-    # We're not using cookies because they won't work well in mobile clients.
     authorizedRedirectUri: ${AUTHORIZED_REDIRECT_URL:http://localhost:3000/oauth2/redirect}
