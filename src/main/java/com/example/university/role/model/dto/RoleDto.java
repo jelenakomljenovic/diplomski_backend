@@ -9,8 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 public class RoleDto {
 
+    private Long id;
 
-  private Long id;
-
-  private String roleName;
+    private String roleName;
 }

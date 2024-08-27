@@ -2,7 +2,6 @@ package com.example.university.department.controller;
 
 import com.example.university.department.model.Department;
 import com.example.university.department.service.DepartmentService;
-import com.example.university.university.model.University;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +16,7 @@ public class DepartmentController {
     private final DepartmentService departmentService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<List<Department>> getAllDepartments(@PathVariable Long id){
+    public ResponseEntity<List<Department>> getAllDepartments(@PathVariable Long id) {
         List<Department> departments = departmentService.findAllByUniversityId(id);
         return ResponseEntity.ok(departments);
     }

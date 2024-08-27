@@ -11,7 +11,6 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.ModelMap;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -66,9 +65,6 @@ public class PictureService {
     public void deletePicture(Long imageId) {
         pictureRepository.deleteById(imageId);
     }
-
-
-
 
 
 }

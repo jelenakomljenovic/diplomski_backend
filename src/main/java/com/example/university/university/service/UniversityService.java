@@ -17,10 +17,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
@@ -134,6 +131,22 @@ public class UniversityService {
                         .map(String::trim)
                         .anyMatch(keyword -> keywords.contains(keyword)))
                 .collect(Collectors.toList());
+    }
+
+    public List<University> findUniversitiesByCity(List<String> universities, String city) {
+        List<University> allUniversities = findAll();
+        List<University> result = new ArrayList<>();
+
+        for (University u : allUniversities) {
+            for (String s : universities) {
+                if (u.getName().equals(s)) {
+                    if (u.getCity().equals(city)) {
+                        result.add(u);
+                    }
+                }
+            }
+        }
+        return result;
     }
 
 

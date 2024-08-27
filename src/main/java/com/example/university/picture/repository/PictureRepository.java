@@ -12,10 +12,6 @@ import java.util.List;
 public interface PictureRepository extends JpaRepository<Picture, Long> {
     List<Picture> findAllByUniversity_IdOrderByIdDesc(Long universityId);
 
-    List<Picture> findAllByUniversity_Id(Long universityId);
-
-    @Transactional
-    void deletePictureByIdAndUniversity_Id(Long imageId, Long universityId);
 
 }
 

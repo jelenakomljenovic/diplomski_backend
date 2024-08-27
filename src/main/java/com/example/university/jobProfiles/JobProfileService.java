@@ -1,14 +1,15 @@
 package com.example.university.jobProfiles;
 
-import lombok.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Service
 public class JobProfileService {
 
@@ -39,11 +40,11 @@ public class JobProfileService {
         request.put("num_skills", numSkills);
 
         HttpHeaders headers = new HttpHeaders();
-       headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.setContentType(MediaType.APPLICATION_JSON);
 
-       HttpEntity<Map<String, Object>> entity = new HttpEntity<>(request, headers);
+        HttpEntity<Map<String, Object>> entity = new HttpEntity<>(request, headers);
 
-       return restTemplate.postForObject(url, entity, Map.class);
+        return restTemplate.postForObject(url, entity, Map.class);
     }
 
     public String preprocessAndPredict(String text) {
@@ -58,8 +59,6 @@ public class JobProfileService {
 
         return restTemplate.postForObject(url, entity, String.class);
     }
-
-
 
 
 }

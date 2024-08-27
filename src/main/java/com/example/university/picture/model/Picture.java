@@ -2,7 +2,6 @@ package com.example.university.picture.model;
 
 import com.example.university.university.model.University;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

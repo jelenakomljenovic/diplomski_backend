@@ -16,9 +16,4 @@ public class ClassificationService {
     public List<Classification> findAll() {
         return classificationRepository.findAll();
     }
-
-    public Classification findProfessionById(Long id) throws Exception {
-        Classification profession = classificationRepository.findById(id).orElseThrow(() -> new Exception("Classification with id " + id + "not found!"));
-        return profession;
-    }
 }

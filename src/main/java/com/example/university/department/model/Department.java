@@ -2,7 +2,6 @@ package com.example.university.department.model;
 
 import com.example.university.major.model.Major;
 import com.example.university.university.model.University;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

@@ -12,8 +12,8 @@ import static com.fasterxml.jackson.core.JsonToken.VALUE_STRING;
 @JsonComponent
 class TrimmingJsonDeserializer extends JsonDeserializer<String> {
 
-  @Override
-  public String deserialize(final JsonParser parser, final DeserializationContext context) throws IOException {
-    return parser.hasToken(VALUE_STRING) ? parser.getText().trim() : null;
-  }
+    @Override
+    public String deserialize(final JsonParser parser, final DeserializationContext context) throws IOException {
+        return parser.hasToken(VALUE_STRING) ? parser.getText().trim() : null;
+    }
 }
