@@ -240,5 +240,12 @@ public class UniversityController {
     }
 
 
+    @PostMapping("/find-by-city/{city}")
+    public ResponseEntity<Set<University>> getAllByCity(@RequestBody Set<String> universities, @PathVariable String city) {
+        Set<University> universities1 = universityService.getUniversitiesByCity(universities, city);
+        return ResponseEntity.ok(universities1);
+    }
+
+
 
 }

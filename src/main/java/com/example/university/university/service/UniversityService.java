@@ -57,6 +57,40 @@ public class UniversityService {
         return cities;
     }
 
+    public Set<University> getUniversitiesByCity(Set<String> universities, String city) {
+        Set<University> result = new HashSet<>();
+        List<University> allUniversities = findAll();
+
+        for (University u : allUniversities) {
+            if (universities.contains(u.getName()) && u.getCity().equals(city)) {
+                result.add(u);
+            }
+        }
+
+        if (result.isEmpty()) {
+            for (University u : allUniversities) {
+                for (String universityName : universities) {
+                    if (universityName.length() >= 5 &&
+                            u.getName().toLowerCase().startsWith(universityName.substring(0, 5).toLowerCase()) &&
+                            u.getCity().equals(city)) {
+                        result.add(u);
+                    }
+                }
+            }
+        }
+
+        if (result.isEmpty()) {
+            for (University u : allUniversities) {
+                if (universities.contains(u.getName())) {
+                    result.add(u);
+                }
+            }
+        }
+
+        return result;
+    }
+
+
     public University insertUniversity(University university) {
         University university1 = new University();
 

@@ -90,7 +90,9 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PUT, EndpointConstants.USER).permitAll()
                 .requestMatchers(HttpMethod.PATCH, EndpointConstants.USER).permitAll()
                 .requestMatchers(HttpMethod.POST, EndpointConstants.JOB_PROFILE).permitAll()
-                .requestMatchers(HttpMethod.GET, EndpointConstants.API_CLASSIFICATION).permitAll());
+                .requestMatchers(HttpMethod.GET, EndpointConstants.API_CLASSIFICATION).permitAll()
+                .requestMatchers(HttpMethod.GET, EndpointConstants.QUESTIONS).permitAll()
+                .requestMatchers(HttpMethod.PUT, EndpointConstants.QUESTIONS).permitAll());
     }
 
 }

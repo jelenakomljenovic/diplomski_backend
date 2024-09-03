@@ -1,8 +1,6 @@
 package com.example.university.jobProfiles;
 
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -59,6 +57,34 @@ public class JobProfileService {
 
         return restTemplate.postForObject(url, entity, String.class);
     }
+    private static final String RECOMMEND_URL = "http://127.0.0.1:5000/recommend";
+    public List<String> getRecommendations(String faculty) {
+        RestTemplate restTemplate = new RestTemplate();
+
+
+        // Postavljanje zaglavlja
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        // Kreiranje HttpEntitiy objekta
+        HttpEntity<String> requestEntity = new HttpEntity<>(faculty, headers);
+
+        // Slanje POST zahteva
+        ResponseEntity<RecommendationResponse> response = restTemplate.exchange(
+                RECOMMEND_URL,
+                HttpMethod.POST,
+                requestEntity,
+                RecommendationResponse.class
+        );
+
+        // Proverite status koda i obradite odgovor
+        if (response.getStatusCode() == HttpStatus.OK) {
+            return response.getBody().getRecommendations();
+        } else {
+            throw new RuntimeException("Failed to get recommendations: " + response.getStatusCode());
+        }
+    }
+
 
 
 }

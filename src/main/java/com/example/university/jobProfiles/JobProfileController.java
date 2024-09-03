@@ -1,6 +1,7 @@
 package com.example.university.jobProfiles;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,4 +44,16 @@ public class JobProfileController {
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
+
+    @PostMapping("/getRecommendations")
+    public ResponseEntity<List<String>> getRecommendations(@RequestBody String faculty) {
+        try {
+            List<String> recommendations = jobProfileService.getRecommendations(faculty);
+            return ResponseEntity.ok(recommendations);
+        } catch (Exception e) {
+            e.printStackTrace(); // Log the error
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
 }

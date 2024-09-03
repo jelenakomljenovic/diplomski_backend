@@ -13,6 +13,7 @@ public final class EndpointConstants {
   public static final String MAJOR = "/major/**";
   public static final String USER = "/users/**";
   public static  final  String JOB_PROFILE = "/job-profile/**";
+  public static final String QUESTIONS = "/questions/**";
 
   private EndpointConstants() {
   }
