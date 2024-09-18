@@ -70,8 +70,8 @@ public class UniversityService {
         if (result.isEmpty()) {
             for (University u : allUniversities) {
                 for (String universityName : universities) {
-                    if (universityName.length() >= 5 &&
-                            u.getName().toLowerCase().startsWith(universityName.substring(0, 5).toLowerCase()) &&
+                    if (u.getSecondaryName() != null &&
+                            u.getSecondaryName().equalsIgnoreCase(universityName) &&
                             u.getCity().equals(city)) {
                         result.add(u);
                     }

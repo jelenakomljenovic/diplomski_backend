@@ -25,6 +25,9 @@ public class Department {
     @NotNull
     private String name;
 
+    @Size(max = 100)
+    private String website;
+
     @ManyToOne
     @JoinColumn(name = "university_id")
     private University university;

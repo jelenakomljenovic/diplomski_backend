@@ -42,6 +42,8 @@ public class University {
 
     private String keyWords;
 
+    private String secondaryName;
+
     @ManyToOne
     @JoinColumn(name = "classification_id")
     private Classification classification;

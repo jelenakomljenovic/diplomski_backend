@@ -23,7 +23,7 @@ public class DepartmentService {
         List<Department> allDepartments = departmentRepository.findAll();
 
         List<Department> filteredDepartments = allDepartments.stream()
-                .filter(department -> universityId == department.getUniversity().getId())
+                .filter(department -> universityId.equals(department.getUniversity().getId()))
                 .collect(Collectors.toList());
 
         return filteredDepartments;
@@ -44,6 +44,7 @@ public class DepartmentService {
         Department department1 = departmentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Department with id: " + department.getId() + " not found!"));
         ;
         department1.setName(department.getName());
+        department1.setWebsite(department.getWebsite());
         Department department2 = departmentRepository.saveAndFlush(department1);
         for (Major major : department1.getMajors()) {
             majorRepository.deleteById(major.getId());
